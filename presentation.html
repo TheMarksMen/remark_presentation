@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Remark UoA Template</title>
+    <title>Smart Energy Challenge</title>
     <meta charset="utf-8">
     <style>
       @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
       @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
       @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      
 
       body { 
         font-family: 'Droid Serif'; 
@@ -75,7 +77,47 @@
         background-size: contain;
         background-image: url(./img/intro/MarksMen.png);
       }
+      
+      .project-management {
+        content: "";
+        position: absolute;
+        top: -160px;
+        left:   60px;
+        height: 1000px;
+        width: 1000px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-image: url(.//img/organisation/Trello\ Board.PNG);
+      }
+      
+      
+      
+      .hardware {
+        content: "";
+        position: absolute;
+        top: 200px;
+        left:   100px;
+        height: 800px;
+        width: 600px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(.//img/netw/EE209_Schematic.png);
+      }
 
+      .branch-graph {
+        content: "";
+        position: absolute;
+        top: 400px;
+        left:   60px;
+        height: 400px;
+        width: 400px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-image: url(.//img/organisation/graph.png);
+        transform: rotate(270deg);
+      }
       .left-column {
         width: 65%;
         float: left;
@@ -218,6 +260,7 @@ name: Hardware
 - Rail-To-Rail OpAmps
 - Simplified Peak Detector
 
+.hardware[]
 ---
 name: Firmware
 
@@ -237,10 +280,11 @@ name: SmartEnergyChallenge
 - Notifications 
 
 ---
-name: ProjectManagement 
+name: ProjectManagement
 
 # Project Management 
-
+.branch-graph[]
+.project-management[]
 ---
 
 class: title-slide
