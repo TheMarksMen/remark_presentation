@@ -2,17 +2,17 @@
 <html>
   <head>
     <title>Smart Energy Challenge</title>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
       @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
       @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
       @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
-      
 
-      body { 
-        font-family: 'Droid Serif'; 
+
+      body {
+        font-family: 'Droid Serif';
         line-height: 1.6;
         }
 
@@ -30,7 +30,7 @@
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
 
       .TitleAuthor {
-        color:white; 
+        color:white;
         font-weight: normal;
         position: absolute;
         bottom: 100px;
@@ -61,8 +61,8 @@
         position: absolute;
         top: 100px;
         left:   110px;
-        height: 500px;
-        width: 500px;
+        height: 400px;
+        width: 400px;
         background-repeat: no-repeat;
         background-size: contain;
         background-image: url(./img/intro/MarksMen.png);
@@ -78,7 +78,7 @@
         background-size: contain;
         background-image: url(./img/intro/MarksMen.png);
       }
-      
+
       .project-management {
         content: "";
         position: absolute;
@@ -89,21 +89,28 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
-        background-image: url(.//img/organisation/Trello\ Board.PNG);
+        background-image: url(./img/organisation/Trello\ Board.PNG);
       }
-      
-      
-      
+
       .hardware {
         content: "";
         position: absolute;
-        top: 200px;
+        top: 300px;
         left:   100px;
         height: 800px;
         width: 600px;
         background-repeat: no-repeat;
         background-size: contain;
-        background-image: url(.//img/netw/EE209_Schematic.png);
+        background-image: url(./img/filter.PNG);
+      }
+
+      .Title {
+        content: "Rail-Rail OpAmps";
+        position: absolute;
+        left: 100px;
+        top: 400px;
+        height: 800px;
+        width: 600px;
       }
 
       .branch-graph {
@@ -116,10 +123,25 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
-        background-image: url(.//img/organisation/graph.png);
+        background-image: url(./img/organisation/graph.png);
         transform: rotate(270deg);
       }
+
       .pcb-image {
+        content: "";
+        position: absolute;
+        top: 120px;
+        right:   100px;
+        height: 500px;
+        width: 500px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-image: url(./img/intro/DEMO_pcb_image.png);
+        transform: rotate(-90deg);
+      }
+
+      .smeChallenge {
         content: "";
         position: absolute;
         top: 120px;
@@ -129,14 +151,15 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
-        background-image: url(.//img/intro/DEMO_pcb_image.png);
+        background-image: url(./img/sme.PNG);
       }
+
       .left-column {
         width: 65%;
         float: left;
         word-wrap: break-word;
       }
-     
+
       .right-column {
         width: 30%;
         float: right;
@@ -148,7 +171,7 @@
         float: left;
         word-wrap: break-word;
       }
-     
+
       .right-column-s {
         width: 20%;
         float: right;
@@ -162,7 +185,7 @@
         color:gray;
         font-size: 10pt;
       }
-      
+
       @page {
         size: 1210px 681px;
         margin: 0;
@@ -177,22 +200,22 @@
           left: 0 !important;
         }
       }
-      
+
       .credits {
         font-size: 12px;
         line-height: 10px !important;
-        font-family: 'Droid Serif'; 
+        font-family: 'Droid Serif';
       }
 
       .codes {
-        
+
         line-height: 20px !important;
       }
 
       .questions {
         font-size: 20px;
         line-height: 28px !important;
-        font-family: 'Droid Serif'; 
+        font-family: 'Droid Serif';
       }
 
       .zoom175 {
@@ -200,7 +223,7 @@
       }
 
       .zoom175:hover {
-        transform: scale(1.75) translateY(-20%) translateX(-20%); 
+        transform: scale(1.75) translateY(-20%) translateX(-20%);
         /* (Note: if the zoom is too large, it will go outside of the viewport) */
       }
 
@@ -208,41 +231,115 @@
         color: #919191;
       }
 
+      #slide-Hardware ul:nth-child(2) {
+        margin-top: 7em;
+      }
     </style>
 
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link
+      rel="stylesheet"
+      href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css"
+    />
     <style>
-    .smaller-font { font-size:14px } 
+      .smaller-font {
+        font-size: 14px;
+      }
     </style>
 
     <!-- KaTeX and Mathjax support refer to below for syntax -->
     <!-- https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference -->
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
-    
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css"
+      integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ"
+      crossorigin="anonymous"
+    />
 
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
-    
-    <script type="text/javascript" async
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"
+      integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js"
+      integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script>
+
+    <script
+      type="text/javascript"
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+    ></script>
 
     <style>
       /* Table Style */
-      .tg  {border-collapse:collapse;border-color:#9ABAD9;border-spacing:0;}
-      .tg td{background-color:#EBF5FF;border-color:#9ABAD9;border-style:solid;border-width:1px;color:#444;
-        font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:2px 10px;word-break:normal;}
-      .tg th{background-color:#409cff;border-color:#9ABAD9;border-style:solid;border-width:1px;color:#fff;
-        font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:2px 10px;word-break:normal;}
-      .tg .tg-dzaw{background-color:#4F81BD;color:#FFF;font-weight:bold;text-align:left;vertical-align:top}
-      .tg .tg-sabo{background-color:#ebf5ff;color:#000000;text-align:left;vertical-align:top}
-      .tg .tg-096r{color:#000000;text-align:left;vertical-align:top}
-      .tg .tg-jayl{background-color:#d2e4fc;color:#000000;text-align:left;vertical-align:top}
-      .tg .tg-ig71{background-color:#D2E4FC;color:#000000;text-align:left;vertical-align:top}
+      .tg {
+        border-collapse: collapse;
+        border-color: #9abad9;
+        border-spacing: 0;
+      }
+      .tg td {
+        background-color: #ebf5ff;
+        border-color: #9abad9;
+        border-style: solid;
+        border-width: 1px;
+        color: #444;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        overflow: hidden;
+        padding: 2px 10px;
+        word-break: normal;
+      }
+      .tg th {
+        background-color: #409cff;
+        border-color: #9abad9;
+        border-style: solid;
+        border-width: 1px;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        overflow: hidden;
+        padding: 2px 10px;
+        word-break: normal;
+      }
+      .tg .tg-dzaw {
+        background-color: #4f81bd;
+        color: #fff;
+        font-weight: bold;
+        text-align: left;
+        vertical-align: top;
+      }
+      .tg .tg-sabo {
+        background-color: #ebf5ff;
+        color: #000000;
+        text-align: left;
+        vertical-align: top;
+      }
+      .tg .tg-096r {
+        color: #000000;
+        text-align: left;
+        vertical-align: top;
+      }
+      .tg .tg-jayl {
+        background-color: #d2e4fc;
+        color: #000000;
+        text-align: left;
+        vertical-align: top;
+      }
+      .tg .tg-ig71 {
+        background-color: #d2e4fc;
+        color: #000000;
+        text-align: left;
+        vertical-align: top;
+      }
     </style>
-
   </head>
   <body>
     <textarea id="source">
@@ -270,10 +367,13 @@ name: Hardware
 # Hardware
 
 - Fourth Order Active Filter 
-- Rail-To-Rail OpAmps
-- Simplified Peak Detector
 
 .hardware[]
+
+
+- Simplified Peak Detector
+
+.pcb-image[]
 ---
 name: Firmware
 
@@ -287,11 +387,12 @@ name: Firmware
 name: SmartEnergyChallenge
 
 # Smart Energy Challenge 
+- Customisable Dashboard
+- Realtime graphs 
+- Firestore Database using GraphQL
+- OAuth Login 
 
-- Firestore Database 
-- OAuth2 login 
-- Notifications 
-.pcb-image[]
+.smeChallenge[]
 ---
 name: ProjectManagement
 
@@ -324,48 +425,52 @@ count: false
     <!-- 
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
     </script>
-    -->    
-   
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript">
-    </script>
+    -->
 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured"
+      type="text/javascript"
+    ></script>
 
-    <script src="remark/remark.min.js" type="text/javascript">
-    </script>
+    <script src="remark/remark.min.js" type="text/javascript"></script>
 
     <script type="text/javascript">
       var hljs = remark.highlighter.engine;
     </script>
     <script src="remark/terminal.language.js" type="text/javascript"></script>
 
-    <script src="https://kit.fontawesome.com/a405eedf54.js" crossorigin="anonymous"></script>
-    <script src="remark/mark.min.js" type="text/javascript">
-    </script>
-    <link rel="stylesheet" href="remark/remark.search.css">
+    <script
+      src="https://kit.fontawesome.com/a405eedf54.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="remark/mark.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="remark/remark.search.css" />
     <script src="remark/remark.search.js" type="text/javascript"></script>
 
     <script type="text/javascript">
-
       var options = {};
 
-      var renderMath = function() {
+      var renderMath = function () {
         renderMathInElement(document.body);
         // or if you want to use $...$ for math,
-        renderMathInElement(document.body, {delimiters: [ // mind the order of delimiters(!?)
-        {left: "$$", right: "$$", display: true},
-        {left: "$", right: "$", display: false},
-        {left: "\\[", right: "\\]", display: true},
-        {left: "\\(", right: "\\)", display: false},
-        ]});
-      }
+        renderMathInElement(document.body, {
+          delimiters: [
+            // mind the order of delimiters(!?)
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+            { left: "\\[", right: "\\]", display: true },
+            { left: "\\(", right: "\\)", display: false },
+          ],
+        });
+      };
 
       var slideshow = remark.create({
-        ratio: '16:9',
-        slideNumberFormat: '%current%',
+        ratio: "16:9",
+        slideNumberFormat: "%current%",
         countIncrementalSlides: false,
         renderMath,
-        highlightLanguage: 'c',
-        highlightStyle: 'github',
+        highlightLanguage: "c",
+        highlightStyle: "github",
         navigation: {
           // Enable or disable navigating using scroll
           // Default: true
@@ -382,37 +487,47 @@ count: false
           // Alternatives: true
           click: false,
         },
-        
       });
 
       MathJax.Hub.Config({
-          tex2jax: {
-          inlineMath: [['$','$'], ['\\(','\\)']],
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-          processEscapes: true
-          }
+        tex2jax: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          skipTags: ["script", "noscript", "style", "textarea", "pre"],
+          processEscapes: true,
+        },
       });
 
-      MathJax.Hub.Queue(function() {
-          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
-              return(elem.SourceElement());
-          }).parent().addClass('has-jax');
+      MathJax.Hub.Queue(function () {
+        $(MathJax.Hub.getAllJax())
+          .map(function (index, elem) {
+            return elem.SourceElement();
+          })
+          .parent()
+          .addClass("has-jax");
       });
 
       MathJax.Hub.Configured();
-      
+
       //Terminal style highligting code
-      var highlighted = document.querySelectorAll("code.terminal span.hljs-ansi");
-      Array.prototype.forEach.call(highlighted, function(next) {
+      var highlighted = document.querySelectorAll(
+        "code.terminal span.hljs-ansi"
+      );
+      Array.prototype.forEach.call(highlighted, function (next) {
         next.insertAdjacentHTML("beforebegin", next.textContent);
         next.parentNode.removeChild(next);
       });
 
-      window.addEventListener('load', function() {
-      RemarkSearch.create({'position': 'top-left', 'caseSensitive' : false, 'showIcon': true, 'autoSearch': true});
+      window.addEventListener("load", function () {
+        RemarkSearch.create({
+          position: "top-left",
+          caseSensitive: false,
+          showIcon: true,
+          autoSearch: true,
+        });
       });
-
-
     </script>
   </body>
 </html>
