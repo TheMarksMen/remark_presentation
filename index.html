@@ -377,6 +377,7 @@
 
       .zoom175:hover {
         transform: scale(1.75) translateY(-20%) translateX(-20%);
+        z-index: 999;
         /* (Note: if the zoom is too large, it will go outside of the viewport) */
       }
 
@@ -511,7 +512,7 @@ count: false
 layout: true
 name: template_slide
 
-.logo-slide[]
+.logo-slide.zoom175[]
 
 ---
 
@@ -524,9 +525,9 @@ name: Design
 - Minimise size 
 - User Experience 
 
-.pcb-image[]
-.wvf[]
-.smeChallenge[]
+.pcb-image.zoom175[]
+.wvf.zoom175[]
+.smeChallenge.zoom175[]
 ---
 
 name: Hardware 
