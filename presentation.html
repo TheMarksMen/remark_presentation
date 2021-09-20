@@ -120,6 +120,7 @@
           right:   70px;
           height: 500px;
           width: 400px;
+          /* width: 50%; */
           background-size: contain;
           background-repeat: no-repeat;
           background-position: center;
@@ -201,6 +202,18 @@
           background-size: contain;
           background-position: center;
           background-image: url(./img/firmware.png);
+        }
+        .pcb-layout {
+          content: "";
+          position: absolute;
+          top: 120px;
+          left:   100px;
+          height: 700px;
+          width: 700px;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          background-image: url(./img/pcb1.png);
         }
 
         .left-column {
@@ -436,6 +449,17 @@ name: Hardware
 - Simplified Peak Detector
 
 ---
+name: Hardware 
+
+# PCB Layout
+
+.pcb-layout[]
+
+
+
+
+
+---
 name: Firmware
 
 # Firmware
@@ -462,7 +486,7 @@ name: ProjectManagement
 .branch-graph[]
 .project-management[]
 <div class = "gif-caption2">
-<p> Used Trello to update meeting notes and keep track of project progress</p>
+    <p> Used Trello to update meeting notes and keep track of project progress</p>
 </div>>
 <div class = "gif-caption1">
   <p>Git commits and merges</p>
