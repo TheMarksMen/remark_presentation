@@ -203,17 +203,43 @@
           background-position: center;
           background-image: url(./img/firmware.png);
         }
-        .pcb-layout {
+        .pcb-layout1{
           content: "";
           position: absolute;
-          top: 120px;
+          top: 140px;
           left:   100px;
-          height: 700px;
-          width: 700px;
+          height: 475px;
+          width: 475px;
           background-repeat: no-repeat;
           background-size: contain;
           background-position: center;
           background-image: url(./img/pcb1.png);
+        }
+        .pcb-layout2{
+          content: "";
+          position: absolute;
+          top: 140px;
+          right:   100px;
+          height: 475px;
+          width: 475px;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          background-image: url(./img/pcb2.png);
+        }
+        .pcb-image-caption2{
+          position: absolute;
+          top: 600px;
+          right: 280px;
+          font-style: italic;
+          font-size: medium;
+        }
+        .pcb-image-caption1{
+          position: absolute;
+          top: 600px;
+          left: 280px;
+          font-style: italic;
+          font-size: medium;
         }
 
         .left-column {
@@ -453,11 +479,15 @@ name: Hardware
 
 # PCB Layout
 
-.pcb-layout[]
+.pcb-layout1[]
+.pcb-layout2[]
 
-
-
-
+<div class = "pcb-image-caption1">
+<p>Top layer</p>
+</div>
+<div class = "pcb-image-caption2">
+<p> Bottom layer</p>
+</div>
 
 ---
 name: Firmware
