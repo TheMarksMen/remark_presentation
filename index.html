@@ -143,10 +143,10 @@
       .wvf {
           content: "";
           position: absolute;
-          bottom: 50px;
-          left:   60px;
-          height: 400px;
-          width: 400px;
+          top: 270px;
+          left:   70px;
+          height: 450px;
+          width: 450px;
           background-repeat: no-repeat;
           background-size: contain;
           background-position: center;
@@ -156,10 +156,10 @@
         .pcb-image {
           content: "";
           position: absolute;
-          bottom: 0px;
-          right:   100px;
-          height: 400px;
-          width: 400px;
+          top: 270px;
+          right:   200px;
+          height: 465px;
+          width: 465px;
           background-repeat: no-repeat;
           background-size: contain;
           background-position: center;
@@ -169,7 +169,7 @@
           content: "";
           position: absolute;
           top: 0px;
-          right:   200px;
+          right:   150px;
           height: 450px;
           width: 500px;
           background-repeat: no-repeat;
@@ -182,7 +182,7 @@
           content: "";
           position: absolute;
           top: 120px;
-          left:   100px;
+          right:   200px;
           height: 700px;
           width: 700px;
           background-repeat: no-repeat;
@@ -194,10 +194,10 @@
         .firmware {
           content: "";
           position: absolute;
-          top: 120px;
-          left:   100px;
-          height: 700px;
-          width: 700px;
+          top: 150px;
+          left:   300px;
+          height: 625px;
+          width: 625px;
           background-repeat: no-repeat;
           background-size: contain;
           background-position: center;
@@ -467,11 +467,9 @@ name: Hardware
 
 # Hardware
 
-- Fourth Order Active Filter 
-
 .hardware[]
 
-
+- Second Order Active Filter 
 - Simplified Peak Detector
 
 ---
@@ -496,6 +494,7 @@ name: Firmware
 
 - Fixed Point Arithmetic 
 - No need for linear approximation 
+.firmware[]
 
 ---
 
