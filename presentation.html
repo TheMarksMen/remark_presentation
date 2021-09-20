@@ -4,236 +4,273 @@
     <title>Smart Energy Challenge</title>
     <meta charset="utf-8" />
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
-      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+        @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+        @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+        @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
 
 
-      body {
-        font-family: 'Droid Serif';
-        line-height: 1.6;
+        body {
+          font-family: 'Droid Serif';
+          line-height: 1.6;
+          }
+
+        h1, h2, h3 {
+          font-family: font-family: 'Nanum Gothic', sans-serif;;
+          font-weight: bold;
+          color: #00467F;
         }
 
-      h1, h2, h3 {
-        font-family: font-family: 'Nanum Gothic', sans-serif;;
-        font-weight: bold;
-        color: #00467F;
-      }
-
-      h1{
-        margin-top: 30px !important;
-        margin-bottom: 30px !important;
-      }
-
-      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
-
-      .TitleAuthor {
-        color:white;
-        font-weight: normal;
-        position: absolute;
-        bottom: 100px;
-        left: 50%;
-        margin-left: -50px;
-        top: 50%;
-        margin-top: -50px;
-      }
-
-      .title-slide .remark-slide-number {
-        display: none;
-      }
-      .title-slide h1, h2, h3, h4 {
-        text-align: right;
-        color:white;
-        line-height: 0.7;
-        font-weight: bold;
-      }
-
-      .title-slide {
-        vertical-align: middle;
-        background-color: #152349;
-        position: relative;
-      }
-
-      .logo-title {
-        content: "";
-        position: absolute;
-        top: 100px;
-        left:   110px;
-        height: 400px;
-        width: 400px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-image: url(./img/intro/MarksMen.png);
-      }
-      .logo-slide {
-        content: "";
-        position: absolute;
-        top: 35px;
-        right:   15px;
-        height: 96px;
-        width: 100px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-image: url(./img/intro/MarksMen.png);
-      }
-
-      .project-management {
-        content: "";
-        position: absolute;
-        top: -160px;
-        left:   60px;
-        height: 1000px;
-        width: 1000px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        background-image: url(./img/organisation/Trello\ Board.PNG);
-      }
-
-      .hardware {
-        content: "";
-        position: absolute;
-        top: 300px;
-        left:   100px;
-        height: 800px;
-        width: 600px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-image: url(./img/filter.PNG);
-      }
-
-      .Title {
-        content: "Rail-Rail OpAmps";
-        position: absolute;
-        left: 100px;
-        top: 400px;
-        height: 800px;
-        width: 600px;
-      }
-
-      .branch-graph {
-        content: "";
-        position: absolute;
-        top: 400px;
-        left:   60px;
-        height: 400px;
-        width: 400px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        background-image: url(./img/organisation/graph.png);
-        transform: rotate(270deg);
-      }
-
-      .pcb-image {
-        content: "";
-        position: absolute;
-        top: 120px;
-        right:   100px;
-        height: 500px;
-        width: 500px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        background-image: url(./img/intro/DEMO_pcb_image.png);
-        transform: rotate(-90deg);
-      }
-
-      .smeChallenge {
-        content: "";
-        position: absolute;
-        top: 120px;
-        left:   100px;
-        height: 700px;
-        width: 700px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        background-image: url(./img/sme.PNG);
-      }
-
-      .left-column {
-        width: 65%;
-        float: left;
-        word-wrap: break-word;
-      }
-
-      .right-column {
-        width: 30%;
-        float: right;
-        word-wrap: break-word;
-      }
-
-      .left-column-s {
-        width: 75%;
-        float: left;
-        word-wrap: break-word;
-      }
-
-      .right-column-s {
-        width: 20%;
-        float: right;
-        word-wrap: break-word;
-      }
-
-      .footer {
-        content: "";
-        position: absolute;
-        bottom: 17px;
-        color:gray;
-        font-size: 10pt;
-      }
-
-      @page {
-        size: 1210px 681px;
-        margin: 0;
-      }
-
-      @media print {
-        .remark-slide-scaler {
-          width: 100% !important;
-          height: 100% !important;
-          transform: scale(1) !important;
-          top: 0 !important;
-          left: 0 !important;
+        h1{
+          margin-top: 30px !important;
+          margin-bottom: 30px !important;
         }
+
+        .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+        .TitleAuthor {
+          color:white;
+          font-weight: normal;
+          position: absolute;
+          bottom: 100px;
+          left: 50%;
+          margin-left: -50px;
+          top: 50%;
+          margin-top: -50px;
+        }
+
+        .title-slide .remark-slide-number {
+          display: none;
+        }
+        .title-slide h1, h2, h3, h4 {
+          text-align: right;
+          color:white;
+          line-height: 0.7;
+          font-weight: bold;
+        }
+
+        .title-slide {
+          vertical-align: middle;
+          background-color: #152349;
+          position: relative;
+        }
+
+        .logo-title {
+          content: "";
+          position: absolute;
+          top: 100px;
+          left:   110px;
+          height: 400px;
+          width: 400px;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-image: url(./img/intro/MarksMen.png);
+        }
+        .logo-slide {
+          content: "";
+          position: absolute;
+          top: 35px;
+          right:   15px;
+          height: 96px;
+          width: 100px;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-image: url(./img/intro/MarksMen.png);
+        }
+
+        .project-management {
+          content: "";
+          position: absolute;
+          top: -160px;
+          left:   60px;
+          height: 1000px;
+          width: 1000px;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          background-image: url(./img/organisation/Trello\ Board.PNG);
+        }
+
+        .hardware {
+          content: "";
+          position: absolute;
+          top: 300px;
+          left:   100px;
+          height: 800px;
+          width: 600px;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-image: url(./img/filter.PNG);
+        }
+
+        .Title {
+          content: "Rail-Rail OpAmps";
+          position: absolute;
+          left: 100px;
+          top: 400px;
+          height: 800px;
+          width: 600px;
+        }
+
+        .branch-graph {
+          content: "";
+          position: absolute;
+          top: 400px;
+          left:   60px;
+          height: 400px;
+          width: 400px;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          background-image: url(./img/organisation/graph.png);
+          transform: rotate(270deg);
+        }
+      .wvf {
+          content: "";
+          position: absolute;
+          bottom: 50px;
+          left:   60px;
+          height: 400px;
+          width: 400px;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          background-image: url(img/wvf.png);
       }
 
-      .credits {
-        font-size: 12px;
-        line-height: 10px !important;
-        font-family: 'Droid Serif';
-      }
+        .pcb-image {
+          content: "";
+          position: absolute;
+          bottom: 0px;
+          right:   100px;
+          height: 400px;
+          width: 400px;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          background-image: url(./img/intro/DEMO_pcb_image.png);
+        }
 
-      .codes {
+        .smeChallenge {
+          content: "";
+          position: absolute;
+          top: 0px;
+          right:   200px;
+          height: 450px;
+          width: 500px;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          background-image: url(./img/sme.PNG);
+        }
 
-        line-height: 20px !important;
-      }
+        .smeChallenge2 {
+          content: "";
+          position: absolute;
+          top: 120px;
+          left:   100px;
+          height: 700px;
+          width: 700px;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          background-image: url(./img/sme.PNG);
+        }
 
-      .questions {
-        font-size: 20px;
-        line-height: 28px !important;
-        font-family: 'Droid Serif';
-      }
+        .firmware {
+          content: "";
+          position: absolute;
+          top: 120px;
+          left:   100px;
+          height: 700px;
+          width: 700px;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          background-image: url(./img/firmware.png);
+        }
 
-      .zoom175 {
-        transition: transform .2s; /* Animation */
-      }
+        .left-column {
+          width: 65%;
+          float: left;
+          word-wrap: break-word;
+        }
 
-      .zoom175:hover {
-        transform: scale(1.75) translateY(-20%) translateX(-20%);
-        /* (Note: if the zoom is too large, it will go outside of the viewport) */
-      }
+        .right-column {
+          width: 30%;
+          float: right;
+          word-wrap: break-word;
+        }
 
-      .color-grey{
-        color: #919191;
-      }
+        .left-column-s {
+          width: 75%;
+          float: left;
+          word-wrap: break-word;
+        }
 
-      #slide-Hardware ul:nth-child(2) {
-        margin-top: 7em;
-      }
+        .right-column-s {
+          width: 20%;
+          float: right;
+          word-wrap: break-word;
+        }
+
+        .footer {
+          content: "";
+          position: absolute;
+          bottom: 17px;
+          color:gray;
+          font-size: 10pt;
+        }
+
+        @page {
+          size: 1210px 681px;
+          margin: 0;
+        }
+
+        @media print {
+          .remark-slide-scaler {
+            width: 100% !important;
+            height: 100% !important;
+            transform: scale(1) !important;
+            top: 0 !important;
+            left: 0 !important;
+          }
+        }
+
+        .credits {
+          font-size: 12px;
+          line-height: 10px !important;
+          font-family: 'Droid Serif';
+        }
+
+        .codes {
+
+          line-height: 20px !important;
+        }
+
+        .questions {
+          font-size: 20px;
+          line-height: 28px !important;
+          font-family: 'Droid Serif';
+        }
+
+        .zoom175 {
+          transition: transform .2s; /* Animation */
+        }
+
+        .zoom175:hover {
+          transform: scale(1.75) translateY(-20%) translateX(-20%);
+          /* (Note: if the zoom is too large, it will go outside of the viewport) */
+        }
+
+        .color-grey{
+          color: #919191;
+        }
+
+        #slide-Hardware ul:nth-child(2) {
+          margin-top: 7em;
+        }
     </style>
 
     <link
@@ -362,6 +399,19 @@ name: template_slide
 
 ---
 
+name: Design 
+
+# Design Goals
+
+- Accuracy 
+- Minimise size 
+- User Experience 
+
+.pcb-image[]
+.wvf[]
+.smeChallenge[]
+---
+
 name: Hardware 
 
 # Hardware
@@ -373,7 +423,6 @@ name: Hardware
 
 - Simplified Peak Detector
 
-.pcb-image[]
 ---
 name: Firmware
 
@@ -392,7 +441,8 @@ name: SmartEnergyChallenge
 - Firestore Database using GraphQL
 - OAuth Login 
 
-.smeChallenge[]
+.smeChallenge2[]
+
 ---
 name: ProjectManagement
 
