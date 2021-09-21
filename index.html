@@ -459,6 +459,28 @@
       /* (Note: if the zoom is too large, it will go outside of the viewport) */
     }
 
+    .peekaboo {
+      transform: translateY(-10%) scale(1.75);
+      opacity: 0%;
+      transition: transform 0.5s, opacity 0.25s;
+      /* Animation */
+    }
+
+    .peekaboo:active {
+      transform: translateY(-127%) scale(1.75);
+      opacity: 100%;
+    }
+
+    .zoom350 {
+      transition: transform 0.5s;
+      /* Animation */
+    }
+
+    .zoom350:hover {
+      transform: scale(3.5) translateY(-30%) translateX(7.5%);
+      /* (Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+
     .color-grey {
       color: #919191;
     }
