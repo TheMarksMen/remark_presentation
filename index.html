@@ -1,502 +1,506 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Smart Energy Challenge</title>
-    <meta charset="utf-8" />
 
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
-      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+<head>
+  <title>Smart Energy Challenge</title>
+  <meta charset="utf-8" />
 
-      body {
-        font-family: "Droid Serif";
-        line-height: 1.6;
-      }
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+    @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+    @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+    @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
-      h1,
-      h2,
-      h3 {
-        font-weight: bold;
-        color: #00467f;
-      }
+    body {
+      font-family: "Droid Serif";
+      line-height: 1.6;
+    }
 
-      h1 {
-        margin-top: 30px !important;
-        margin-bottom: 30px !important;
-      }
+    h1,
+    h2,
+    h3 {
+      font-weight: bold;
+      color: #00467f;
+    }
 
-      .remark-code,
-      .remark-inline-code {
-        font-family: "Ubuntu Mono";
-      }
+    h1 {
+      margin-top: 30px !important;
+      margin-bottom: 30px !important;
+    }
 
-      .TitleAuthor {
-        color: white;
-        font-weight: normal;
-        position: absolute;
-        bottom: 100px;
-        left: 50%;
-        margin-left: -50px;
-        top: 50%;
-        margin-top: -50px;
-      }
+    .remark-code,
+    .remark-inline-code {
+      font-family: "Ubuntu Mono";
+    }
 
-      .title-slide .remark-slide-number {
-        display: none;
-      }
-      .title-slide h1,
-      h2,
-      h3,
-      h4 {
-        text-align: right;
-        color: white;
-        line-height: 0.7;
-        font-weight: bold;
-      }
+    .TitleAuthor {
+      color: white;
+      font-weight: normal;
+      position: absolute;
+      bottom: 100px;
+      left: 50%;
+      margin-left: -50px;
+      top: 50%;
+      margin-top: -50px;
+    }
 
-      .title-slide {
-        vertical-align: middle;
-        background-color: #152349;
-        position: relative;
-      }
+    .title-slide .remark-slide-number {
+      display: none;
+    }
 
-      .logo-title {
-        content: "";
-        position: absolute;
-        top: 100px;
-        left: 110px;
-        height: 400px;
-        width: 400px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-image: url(./img/intro/MarksMen.png);
-      }
-      .logo-slide {
-        content: "";
-        position: absolute;
-        top: 35px;
-        right: 15px;
-        height: 96px;
-        width: 100px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-image: url(./img/intro/MarksMen.png);
-      }
+    .title-slide h1,
+    h2,
+    h3,
+    h4 {
+      text-align: right;
+      color: white;
+      line-height: 0.7;
+      font-weight: bold;
+    }
 
-      .project-management {
-        content: "";
-        position: absolute;
-        top: -30px;
-        left: 60px;
-        height: 750px;
-        width: 650px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        background-image: url(./img/organisation/trello.gif);
-      }
+    .title-slide {
+      vertical-align: middle;
+      background-color: #152349;
+      position: relative;
+    }
 
-      .hardware {
-        content: "";
-        position: absolute;
-        top: 300px;
-        left: 50px;
-        height: 800px;
-        width: 600px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-image: url(./img/filter.PNG);
-      }
+    .logo-title {
+      content: "";
+      position: absolute;
+      top: 100px;
+      left: 110px;
+      height: 400px;
+      width: 400px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(./img/intro/MarksMen.png);
+    }
 
-      .Title {
-        content: "Rail-Rail OpAmps";
-        position: absolute;
-        left: 100px;
-        top: 400px;
-        height: 800px;
-        width: 600px;
-      }
+    .logo-slide {
+      content: "";
+      position: absolute;
+      top: 35px;
+      right: 15px;
+      height: 96px;
+      width: 100px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(./img/intro/MarksMen.png);
+    }
 
-      .branch-graph {
-        content: "";
-        position: absolute;
-        top: 150px;
-        right: 70px;
-        height: 500px;
-        width: 400px;
-        /* width: 50%; */
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-image: url(./img/organisation/git-tree.gif);
-      }
-      .gif-caption1 {
-        position: absolute;
-        top: 515px;
-        right: 200px;
-        font-style: italic;
-        font-size: medium;
-      }
-      .gif-caption2 {
-        position: absolute;
-        top: 515px;
-        left: 130px;
-        font-style: italic;
-        font-size: medium;
-      }
-      .wvf {
-        content: "";
-        position: absolute;
-        top: 270px;
-        left: 70px;
-        height: 450px;
-        width: 450px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        background-image: url(img/wvf.png);
-      }
+    .project-management {
+      content: "";
+      position: absolute;
+      top: -30px;
+      left: 60px;
+      height: 750px;
+      width: 650px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url(./img/organisation/trello.gif);
+    }
 
-      .pcb-image {
-        content: "";
-        position: absolute;
-        top: 270px;
-        right: 200px;
-        height: 465px;
-        width: 465px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        background-image: url(./img/intro/pcb_image.png);
-      }
-      .coke-pcb-image {
-        content: "";
-        position: absolute;
-        top: 270px;
-        right: 200px;
-        height: 300px;
-        width: 300px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        background-image: url(./img/intro/coke_pcb_image.png);
-      }
-      .smeChallenge {
-        content: "";
-        position: absolute;
-        top: 0px;
-        right: 150px;
-        height: 450px;
-        width: 500px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        background-image: url(./img/sme.PNG);
-      }
+    .hardware {
+      content: "";
+      position: absolute;
+      top: 300px;
+      left: 50px;
+      height: 800px;
+      width: 600px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(./img/filter.PNG);
+    }
 
-      .smeChallenge2 {
-        content: "";
-        position: absolute;
-        top: 120px;
-        right: 200px;
-        height: 700px;
-        width: 700px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        background-image: url(./img/sme.gif);
-      }
+    .Title {
+      content: "Rail-Rail OpAmps";
+      position: absolute;
+      left: 100px;
+      top: 400px;
+      height: 800px;
+      width: 600px;
+    }
 
-      .firmware {
-        content: "";
-        position: absolute;
-        top: 150px;
-        left: 300px;
-        height: 625px;
-        width: 625px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        background-image: url(./img/firmware.png);
-      }
+    .branch-graph {
+      content: "";
+      position: absolute;
+      top: 150px;
+      right: 70px;
+      height: 500px;
+      width: 400px;
+      /* width: 50%; */
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url(./img/organisation/git-tree.gif);
+    }
 
-      .layout1 {
-        content: "";
-        position: absolute;
-        top: 150px;
-        left: 75px;
-        height: 450px;
-        width: 500px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        background-image: url(./img/pcb1.PNG);
-      }
+    .gif-caption1 {
+      position: absolute;
+      top: 515px;
+      right: 200px;
+      font-style: italic;
+      font-size: medium;
+    }
 
-      .layout2 {
-        content: "";
-        position: absolute;
-        top: 150px;
-        right: 75px;
-        height: 450px;
-        width: 500px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        background-image: url(./img/pcb2.PNG);
-      }
+    .gif-caption2 {
+      position: absolute;
+      top: 515px;
+      left: 130px;
+      font-style: italic;
+      font-size: medium;
+    }
 
-      .pcb-image-caption2 {
-        position: absolute;
-        top: 600px;
-        right: 280px;
-        font-style: italic;
-        font-size: medium;
-      }
+    .wvf {
+      content: "";
+      position: absolute;
+      top: 270px;
+      left: 70px;
+      height: 450px;
+      width: 450px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url(img/wvf.png);
+    }
 
-      .pcb-image-caption3 {
-        position: absolute;
-        top: 600px;
-        right: 200px;
-        font-style: italic;
-        font-size: medium;
-      }
+    .pcb-image {
+      content: "";
+      position: absolute;
+      top: 270px;
+      right: 200px;
+      height: 465px;
+      width: 465px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url(./img/intro/pcb_image.png);
+    }
 
-      .pcb-image-caption4 {
-        position: absolute;
-        top: 600px;
-        right: 600px;
-        font-style: italic;
-        font-size: medium;
-      }
+    .coke-pcb-image {
+      content: "";
+      position: absolute;
+      top: 270px;
+      right: 200px;
+      height: 300px;
+      width: 300px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url(./img/intro/coke_pcb_image.png);
+    }
 
-      .pcb-image-caption5 {
-        position: absolute;
-        top: 600px;
-        right: 800px;
-        font-style: italic;
-        font-size: medium;
-      }
-      .accuracy {
-        position: absolute;
-        top: 620px;
-        right: 800px;
-        font-style: italic;
-        font-size: medium;
-      }
-      .minimial-size {
-        position: absolute;
-        top: 620px;
-        right: 300px;
-        font-style: italic;
-        font-size: medium;
-      }
-      .user-experience {
-        position: absolute;
-        top: 330px;
-        right: 300px;
-        font-style: italic;
-        font-size: medium;
-      }
-      .pcb-image-caption1 {
-        position: absolute;
-        top: 600px;
-        left: 280px;
-        font-style: italic;
-        font-size: medium;
-      }
+    .smeChallenge {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 150px;
+      height: 450px;
+      width: 500px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url(./img/sme.PNG);
+    }
 
-      .left-column {
-        width: 65%;
-        float: left;
-        word-wrap: break-word;
-      }
+    .smeChallenge2 {
+      content: "";
+      position: absolute;
+      top: 120px;
+      right: 200px;
+      height: 700px;
+      width: 700px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url(./img/sme.gif);
+    }
 
-      .right-column {
-        width: 30%;
-        float: right;
-        word-wrap: break-word;
-      }
+    .firmware {
+      content: "";
+      position: absolute;
+      top: 150px;
+      left: 300px;
+      height: 625px;
+      width: 625px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url(./img/firmware.png);
+    }
 
-      .left-column-s {
-        width: 75%;
-        float: left;
-        word-wrap: break-word;
-      }
+    .layout1 {
+      content: "";
+      position: absolute;
+      top: 150px;
+      left: 75px;
+      height: 450px;
+      width: 500px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url(./img/pcb1.PNG);
+    }
 
-      .right-column-s {
-        width: 20%;
-        float: right;
-        word-wrap: break-word;
-      }
+    .layout2 {
+      content: "";
+      position: absolute;
+      top: 150px;
+      right: 75px;
+      height: 450px;
+      width: 500px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url(./img/pcb2.PNG);
+    }
 
-      .footer {
-        content: "";
-        position: absolute;
-        bottom: 17px;
-        color: gray;
-        font-size: 10pt;
-      }
+    .pcb-image-caption2 {
+      position: absolute;
+      top: 600px;
+      right: 280px;
+      font-style: italic;
+      font-size: medium;
+    }
 
-      @page {
-        size: 1210px 681px;
-        margin: 0;
-      }
+    .pcb-image-caption3 {
+      position: absolute;
+      top: 600px;
+      right: 200px;
+      font-style: italic;
+      font-size: medium;
+    }
 
-      @media print {
-        .remark-slide-scaler {
-          width: 100% !important;
-          height: 100% !important;
-          transform: scale(1) !important;
-          top: 0 !important;
-          left: 0 !important;
-        }
-      }
+    .pcb-image-caption4 {
+      position: absolute;
+      top: 600px;
+      right: 600px;
+      font-style: italic;
+      font-size: medium;
+    }
 
-      .credits {
-        font-size: 12px;
-        line-height: 10px !important;
-        font-family: "Droid Serif";
-      }
+    .pcb-image-caption5 {
+      position: absolute;
+      top: 600px;
+      right: 800px;
+      font-style: italic;
+      font-size: medium;
+    }
 
-      .codes {
-        line-height: 20px !important;
-      }
+    .accuracy {
+      position: absolute;
+      top: 620px;
+      right: 800px;
+      font-style: italic;
+      font-size: medium;
+    }
 
-      .questions {
-        font-size: 20px;
-        line-height: 28px !important;
-        font-family: "Droid Serif";
-      }
+    .minimial-size {
+      position: absolute;
+      top: 620px;
+      right: 300px;
+      font-style: italic;
+      font-size: medium;
+    }
 
-      .zoom175 {
-        transition: transform 0.2s; /* Animation */
-      }
+    .user-experience {
+      position: absolute;
+      top: 330px;
+      right: 300px;
+      font-style: italic;
+      font-size: medium;
+    }
 
-      .zoom175:hover {
-        transform: scale(1.75) translateY(-20%) translateX(-20%);
-        z-index: 999;
-        /* (Note: if the zoom is too large, it will go outside of the viewport) */
-      }
+    .pcb-image-caption1 {
+      position: absolute;
+      top: 600px;
+      left: 280px;
+      font-style: italic;
+      font-size: medium;
+    }
 
-      .color-grey {
-        color: #919191;
-      }
+    .left-column {
+      width: 65%;
+      float: left;
+      word-wrap: break-word;
+    }
 
-      #slide-Hardware ul:nth-child(2) {
-        margin-top: 7em;
-      }
-    </style>
+    .right-column {
+      width: 30%;
+      float: right;
+      word-wrap: break-word;
+    }
 
-    <link
-      rel="stylesheet"
-      href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css"
-    />
-    <style>
-      .smaller-font {
-        font-size: 14px;
-      }
-    </style>
+    .left-column-s {
+      width: 75%;
+      float: left;
+      word-wrap: break-word;
+    }
 
-    <!-- KaTeX and Mathjax support refer to below for syntax -->
-    <!-- https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference -->
+    .right-column-s {
+      width: 20%;
+      float: right;
+      word-wrap: break-word;
+    }
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css"
-      integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ"
-      crossorigin="anonymous"
-    />
+    .footer {
+      content: "";
+      position: absolute;
+      bottom: 17px;
+      color: gray;
+      font-size: 10pt;
+    }
 
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"
-      integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij"
-      crossorigin="anonymous"
-    ></script>
+    @page {
+      size: 1210px 681px;
+      margin: 0;
+    }
 
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js"
-      integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
-      crossorigin="anonymous"
-      onload="renderMathInElement(document.body);"
-    ></script>
+    @media print {
+      .remark-slide-scaler {
+        width: 100% !important;
+        height: 100% !important;
+        transform: scale(1) !important;
+        top: 0 !important;
+        left: 0 !important;
+      }
+    }
 
-    <script
-      type="text/javascript"
-      async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
-    ></script>
+    .credits {
+      font-size: 12px;
+      line-height: 10px !important;
+      font-family: "Droid Serif";
+    }
 
-    <style>
-      /* Table Style */
-      .tg {
-        border-collapse: collapse;
-        border-color: #9abad9;
-        border-spacing: 0;
-      }
-      .tg td {
-        background-color: #ebf5ff;
-        border-color: #9abad9;
-        border-style: solid;
-        border-width: 1px;
-        color: #444;
-        font-family: Arial, sans-serif;
-        font-size: 14px;
-        overflow: hidden;
-        padding: 2px 10px;
-        word-break: normal;
-      }
-      .tg th {
-        background-color: #409cff;
-        border-color: #9abad9;
-        border-style: solid;
-        border-width: 1px;
-        color: #fff;
-        font-family: Arial, sans-serif;
-        font-size: 14px;
-        font-weight: normal;
-        overflow: hidden;
-        padding: 2px 10px;
-        word-break: normal;
-      }
-      .tg .tg-dzaw {
-        background-color: #4f81bd;
-        color: #fff;
-        font-weight: bold;
-        text-align: left;
-        vertical-align: top;
-      }
-      .tg .tg-sabo {
-        background-color: #ebf5ff;
-        color: #000000;
-        text-align: left;
-        vertical-align: top;
-      }
-      .tg .tg-096r {
-        color: #000000;
-        text-align: left;
-        vertical-align: top;
-      }
-      .tg .tg-jayl {
-        background-color: #d2e4fc;
-        color: #000000;
-        text-align: left;
-        vertical-align: top;
-      }
-      .tg .tg-ig71 {
-        background-color: #d2e4fc;
-        color: #000000;
-        text-align: left;
-        vertical-align: top;
-      }
-    </style>
-  </head>
-  <body>
-    <textarea id="source">
+    .codes {
+      line-height: 20px !important;
+    }
+
+    .questions {
+      font-size: 20px;
+      line-height: 28px !important;
+      font-family: "Droid Serif";
+    }
+
+    .zoom175 {
+      transition: transform 0.2s;
+      /* Animation */
+    }
+
+    .zoom175:hover {
+      transform: scale(1.75) translateY(-20%) translateX(-20%);
+      z-index: 999;
+      /* (Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+
+    .color-grey {
+      color: #919191;
+    }
+
+    #slide-Hardware ul:nth-child(2) {
+      margin-top: 7em;
+    }
+  </style>
+
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" />
+  <style>
+    .smaller-font {
+      font-size: 14px;
+    }
+  </style>
+
+  <!-- KaTeX and Mathjax support refer to below for syntax -->
+  <!-- https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css"
+    integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous" />
+
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"
+    integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij"
+    crossorigin="anonymous"></script>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  <style>
+    /* Table Style */
+    .tg {
+      border-collapse: collapse;
+      border-color: #9abad9;
+      border-spacing: 0;
+    }
+
+    .tg td {
+      background-color: #ebf5ff;
+      border-color: #9abad9;
+      border-style: solid;
+      border-width: 1px;
+      color: #444;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      overflow: hidden;
+      padding: 2px 10px;
+      word-break: normal;
+    }
+
+    .tg th {
+      background-color: #409cff;
+      border-color: #9abad9;
+      border-style: solid;
+      border-width: 1px;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: normal;
+      overflow: hidden;
+      padding: 2px 10px;
+      word-break: normal;
+    }
+
+    .tg .tg-dzaw {
+      background-color: #4f81bd;
+      color: #fff;
+      font-weight: bold;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .tg .tg-sabo {
+      background-color: #ebf5ff;
+      color: #000000;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .tg .tg-096r {
+      color: #000000;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .tg .tg-jayl {
+      background-color: #d2e4fc;
+      color: #000000;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .tg .tg-ig71 {
+      background-color: #d2e4fc;
+      color: #000000;
+      text-align: left;
+      vertical-align: top;
+    }
+  </style>
+</head>
+
+<body>
+  <textarea id="source">
 
 class: title-slide
 count: false
@@ -513,6 +517,7 @@ layout: true
 name: template_slide
 
 .logo-slide[]
+
 
 ---
 
@@ -621,112 +626,109 @@ count: false
 
     </textarea>
 
-    <!-- 
+  <!-- 
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
     </script>
     -->
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured"
-      type="text/javascript"
-    ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured"
+    type="text/javascript"></script>
 
-    <script src="remark/remark.min.js" type="text/javascript"></script>
+  <script src="remark/remark.min.js" type="text/javascript"></script>
 
-    <script type="text/javascript">
-      var hljs = remark.highlighter.engine;
-    </script>
-    <script src="remark/terminal.language.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    var hljs = remark.highlighter.engine;
+  </script>
+  <script src="remark/terminal.language.js" type="text/javascript"></script>
 
-    <script
-      src="https://kit.fontawesome.com/a405eedf54.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="remark/mark.min.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="remark/remark.search.css" />
-    <script src="remark/remark.search.js" type="text/javascript"></script>
+  <script src="https://kit.fontawesome.com/a405eedf54.js" crossorigin="anonymous"></script>
+  <script src="remark/mark.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="remark/remark.search.css" />
+  <script src="remark/remark.search.js" type="text/javascript"></script>
 
-    <script type="text/javascript">
-      var options = {};
+  <script type="text/javascript">
+    var options = {};
 
-      var renderMath = function () {
-        renderMathInElement(document.body);
-        // or if you want to use $...$ for math,
-        renderMathInElement(document.body, {
-          delimiters: [
-            // mind the order of delimiters(!?)
-            { left: "$$", right: "$$", display: true },
-            { left: "$", right: "$", display: false },
-            { left: "\\[", right: "\\]", display: true },
-            { left: "\\(", right: "\\)", display: false },
-          ],
-        });
-      };
-
-      var slideshow = remark.create({
-        ratio: "16:9",
-        slideNumberFormat: "%current%",
-        countIncrementalSlides: false,
-        renderMath,
-        highlightLanguage: "c",
-        highlightStyle: "github",
-        navigation: {
-          // Enable or disable navigating using scroll
-          // Default: true
-          // Alternatives: false
-          scroll: true,
-
-          // Enable or disable navigation using touch
-          // Default: true
-          // Alternatives: false
-          touch: true,
-
-          // Enable or disable navigation using click
-          // Default: false
-          // Alternatives: true
-          click: false,
-        },
+    var renderMath = function () {
+      renderMathInElement(document.body);
+      // or if you want to use $...$ for math,
+      renderMathInElement(document.body, {
+        delimiters: [
+          // mind the order of delimiters(!?)
+          { left: "$$", right: "$$", display: true },
+          { left: "$", right: "$", display: false },
+          { left: "\\[", right: "\\]", display: true },
+          { left: "\\(", right: "\\)", display: false },
+        ],
       });
+    };
 
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [
-            ["$", "$"],
-            ["\\(", "\\)"],
-          ],
-          skipTags: ["script", "noscript", "style", "textarea", "pre"],
-          processEscapes: true,
-        },
+    var slideshow = remark.create({
+      ratio: "16:9",
+      slideNumberFormat: "%current%",
+      countIncrementalSlides: false,
+      renderMath,
+      highlightLanguage: "c",
+      highlightStyle: "github",
+      navigation: {
+        // Enable or disable navigating using scroll
+        // Default: true
+        // Alternatives: false
+        scroll: true,
+
+        // Enable or disable navigation using touch
+        // Default: true
+        // Alternatives: false
+        touch: true,
+
+        // Enable or disable navigation using click
+        // Default: false
+        // Alternatives: true
+        click: false,
+      },
+    });
+
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [
+          ["$", "$"],
+          ["\\(", "\\)"],
+        ],
+        skipTags: ["script", "noscript", "style", "textarea", "pre"],
+        processEscapes: true,
+      },
+    });
+
+    MathJax.Hub.Queue(function () {
+      $(MathJax.Hub.getAllJax())
+        .map(function (index, elem) {
+          return elem.SourceElement();
+        })
+        .parent()
+        .addClass("has-jax");
+    });
+
+    MathJax.Hub.Configured();
+
+    //Terminal style highligting code
+    var highlighted = document.querySelectorAll(
+      "code.terminal span.hljs-ansi"
+    );
+    Array.prototype.forEach.call(highlighted, function (next) {
+      next.insertAdjacentHTML("beforebegin", next.textContent);
+      next.parentNode.removeChild(next);
+    });
+
+    window.addEventListener("load", function () {
+      RemarkSearch.create({
+        position: "top-left",
+        caseSensitive: false,
+        showIcon: true,
+        autoSearch: true,
       });
+    });
+  </script>
+</body>
 
-      MathJax.Hub.Queue(function () {
-        $(MathJax.Hub.getAllJax())
-          .map(function (index, elem) {
-            return elem.SourceElement();
-          })
-          .parent()
-          .addClass("has-jax");
-      });
-
-      MathJax.Hub.Configured();
-
-      //Terminal style highligting code
-      var highlighted = document.querySelectorAll(
-        "code.terminal span.hljs-ansi"
-      );
-      Array.prototype.forEach.call(highlighted, function (next) {
-        next.insertAdjacentHTML("beforebegin", next.textContent);
-        next.parentNode.removeChild(next);
-      });
-
-      window.addEventListener("load", function () {
-        RemarkSearch.create({
-          position: "top-left",
-          caseSensitive: false,
-          showIcon: true,
-          autoSearch: true,
-        });
-      });
-    </script>
-  </body>
 </html>
